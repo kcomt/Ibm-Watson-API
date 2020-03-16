@@ -51,5 +51,10 @@ public class PlansServiceImpl implements IPlansService{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public Plans findPlansbyClientDNI(String dni) {
+		return planRepository.findPlansbyClientDNI(dni);
+	}
 	
 }
