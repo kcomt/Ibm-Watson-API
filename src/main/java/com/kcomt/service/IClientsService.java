@@ -1,5 +1,8 @@
 package com.kcomt.service;
 
-public interface IClientsService {
+import com.kcomt.entities.Clients;
+import com.kcomt.entities.Plans;
+
+public interface IClientsService extends CrudService<Clients>{
 
 }

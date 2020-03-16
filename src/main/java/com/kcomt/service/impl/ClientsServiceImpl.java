@@ -4,37 +4,36 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import com.kcomt.entities.Plans;
+import com.kcomt.entities.Clients;
+import com.kcomt.repository.ClientRepository;
 import com.kcomt.repository.PlanRepository;
-import com.kcomt.service.IPlansService;
+import com.kcomt.service.IClientsService;
 
-@Service
-public class PlansServiceImpl implements IPlansService{
+public class ClientsServiceImpl implements IClientsService{
 
 	@Autowired
-	private PlanRepository planRepository;
-
+	private ClientRepository clientsRepository;
+	
 	@Override
-	public List<Plans> findAll() throws Exception {
+	public List<Clients> findAll() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Plans save(Plans t) throws Exception {
-		return planRepository.save(t);
+	public Clients save(Clients t) throws Exception {
+		return clientsRepository.save(t);
 	}
 
 	@Override
-	public Plans update(Plans t) throws Exception {
+	public Clients update(Clients t) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<Plans> findById(Integer id) throws Exception {
+	public Optional<Clients> findById(Integer id) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -51,9 +50,4 @@ public class PlansServiceImpl implements IPlansService{
 		
 	}
 
-	@Override
-	public Plans findPlansbyClientDNI(String dni) {
-		return planRepository.findPlansbyClientDNI(dni);
-	}
-	
 }
