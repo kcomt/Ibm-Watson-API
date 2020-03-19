@@ -18,15 +18,15 @@ public class Plans {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 		
-	@Size(min = 4, message = "Username must be atleast 4 charecters in length")
+	@Size(min = 1, message = "Username must be atleast 4 charecters in length")
 	@Column(name = "internetMegas", nullable = false, length = 100)
 	private String internetMegas;
 	
-	@Size(min = 4, message = "Username must be atleast 4 charecters in length")
+	@Size(min = 1, message = "Username must be atleast 4 charecters in length")
 	@Column(name = "SMS", nullable = false, length = 100)
 	private String SMS;
 	
-	@Size(min = 2, message = "Email must be 5 charecters in length")
+	@Size(min = 1, message = "Email must be 5 charecters in length")
 	@Column(name = "cost", nullable = false, length = 100)
 	private String cost;
 
