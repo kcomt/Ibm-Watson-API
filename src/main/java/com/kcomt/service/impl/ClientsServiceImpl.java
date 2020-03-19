@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.kcomt.entities.Clients;
 import com.kcomt.repository.ClientRepository;
 import com.kcomt.repository.PlanRepository;
 import com.kcomt.service.IClientsService;
 
+@Service
 public class ClientsServiceImpl implements IClientsService{
 
 	@Autowired
