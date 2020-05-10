@@ -19,8 +19,7 @@ public class ClientsServiceImpl implements IClientsService{
 	
 	@Override
 	public List<Clients> findAll() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return clientsRepository.findAll();
 	}
 
 	@Override

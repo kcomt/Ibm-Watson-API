@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.kcomt.entities.Plans;
 import com.kcomt.repository.PlanRepository;
@@ -50,7 +51,8 @@ public class PlansServiceImpl implements IPlansService{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	@Transactional(readOnly = true)
 	@Override
 	public Plans findPlansbyClientDNI(String dni) {
 		return planRepository.findPlansbyClientDNI(dni);
